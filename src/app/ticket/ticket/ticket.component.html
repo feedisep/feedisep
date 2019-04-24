@@ -1,3 +1,31 @@
-<p>
-  ticket works!
-</p>
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>
+      Some Random Problem
+    </mat-card-title>
+    <mat-card-subtitle>
+      ticket-serial
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="temp-log">
+
+    </div>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <span>description</span>
+        <span class="spacer"></span>
+        <mat-icon class="padding-icon" svgIcon="favorite" matRipple matRippleCentered="true"
+                  matRippleRadius="20"></mat-icon>
+        <mat-icon class="padding-icon" svgIcon="bookmark" matRipple matRippleCentered="true"
+                  matRippleRadius="20"></mat-icon>
+        <mat-icon class="padding-icon" svgIcon="share" matRipple matRippleCentered="true"
+                  matRippleRadius="20"></mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-progress-bar mode="determinate" value="50" color="primary"></mat-progress-bar>
+  </mat-card-footer>
+</mat-card>

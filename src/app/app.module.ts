@@ -8,7 +8,7 @@ import { TicketMinComponent } from './ticket/ticket-min/ticket-min.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import {MatButtonModule, MatCardModule, MatProgressBarModule, MatRippleModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatProgressBarModule, MatRippleModule, MatToolbarModule, MatTooltipModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import {MatButtonModule, MatCardModule, MatProgressBarModule, MatRippleModule, M
     MatIconModule,
     HttpClientModule,
     MatToolbarModule,
-    MatRippleModule
+    MatRippleModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

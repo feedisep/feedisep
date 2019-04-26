@@ -18,14 +18,18 @@
       <mat-toolbar-row>
         <span>description</span>
         <span class="spacer"></span>
-        <mat-icon class="padding-icon" svgIcon="favorite" matRipple matRippleCentered="true"
-                  matRippleRadius="20"></mat-icon>
-        <mat-icon class="padding-icon" svgIcon="bookmark" matRipple matRippleCentered="true"
-                  matRippleRadius="20"></mat-icon>
-        <mat-icon class="padding-icon" svgIcon="share" matRipple matRippleCentered="true"
-                  matRippleRadius="20"></mat-icon>
+        <button mat-icon-button>
+          <mat-icon svgIcon="favorite"></mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon svgIcon="bookmark"></mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon svgIcon="share"></mat-icon>
+        </button>
       </mat-toolbar-row>
     </mat-toolbar>
-    <mat-progress-bar mode="indeterminate" value="50" color="primary" matTooltip="status info" matTooltipPosition="above"></mat-progress-bar>
+    <mat-progress-bar mode="indeterminate" value="50" color="primary" matTooltip="status info"
+                      matTooltipPosition="above"></mat-progress-bar>
   </mat-card-footer>
 </mat-card>

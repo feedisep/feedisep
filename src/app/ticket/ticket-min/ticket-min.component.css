@@ -1,0 +1,37 @@
+mat-card {
+  max-width: 90%;
+}
+app-ticket-min{
+  max-width: 45%;
+}
+.solo-min-ticket {
+  max-width: 45%;
+  margin: 0 15px ;
+}
+.state-card{
+  font-weight: bold;
+  margin: 15px;
+  padding: 7px;
+}
+.state-validated{
+  background-color: lightcyan;
+}
+.state-new{
+  color:white;
+  background-color: blueviolet;
+}
+.state-taken{
+  background-color: darksalmon;
+}
+.state-solved{
+  background-color: yellowgreen;
+}
+.state-paused{
+  background-color: tomato;
+}
+.state-archived{
+  background-color: gold;
+}
+.state-canceled{
+  background-color: crimson;
+}

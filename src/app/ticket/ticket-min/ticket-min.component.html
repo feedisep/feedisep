@@ -1,3 +1,51 @@
-<p>
-  ticket-min works!
-</p>
+<mat-card style="display: flex">
+  <mat-card class="solo-min-ticket">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>
+        Some Random Problem
+      </mat-card-title>
+      <mat-card-subtitle>
+        ticket-serial
+      </mat-card-subtitle>
+    </mat-card-header>
+      <mat-list>
+        <mat-list-item> State : <mat-card class="state-card state-new"> New </mat-card>
+          <!--
+          <mat-card class="state-card state-validated"> Validated </mat-card>
+          <mat-card class="state-card state-taken"> Taken </mat-card>
+          <mat-card class="state-card state-solved"> Solved </mat-card>
+          <mat-card class="state-card state-paused"> Paused </mat-card>
+          <mat-card class="state-card state-archived"> Archived </mat-card>
+          <mat-card class="state-card state-canceled"> Canceled </mat-card> --></mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item><mat-icon svgIcon="favorite">  </mat-icon>15 <!-- number of likes--> </mat-list-item>
+        <mat-list-item><mat-icon svgIcon="comment">  </mat-icon>4 <!-- number of comments-->  </mat-list-item>
+      </mat-list>
+  </mat-card>
+  <mat-card class="solo-min-ticket">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>
+        Some Random Problem 2
+      </mat-card-title>
+      <mat-card-subtitle>
+        ticket-serial
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-list>
+      <mat-list-item> State : <mat-card class="state-card state-taken"> Taken </mat-card>
+        <!--
+        <mat-card class="state-card state-new"> New </mat-card>
+        <mat-card class="state-card state-validated"> Validated </mat-card>
+
+        <mat-card class="state-card state-solved"> Solved </mat-card>
+        <mat-card class="state-card state-paused"> Paused </mat-card>
+        <mat-card class="state-card state-archived"> Archived </mat-card>
+        <mat-card class="state-card state-canceled"> Canceled </mat-card> --></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item><mat-icon svgIcon="favorite">  </mat-icon>15 <!-- number of likes--> </mat-list-item>
+      <mat-list-item><mat-icon svgIcon="comment">  </mat-icon>4 <!-- number of comments-->  </mat-list-item>
+    </mat-list>
+  </mat-card>
+</mat-card>

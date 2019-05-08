@@ -9,13 +9,17 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule, MatCardModule, MatProgressBarModule, MatRippleModule, MatToolbarModule, MatTooltipModule} from '@angular/material';
+import { FeedComponent } from './feed/feed.component';
+import { FeedentryComponent } from './feed/feedentry/feedentry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TicketComponent,
     TicketFullComponent,
-    TicketMinComponent
+    TicketMinComponent,
+    FeedComponent,
+    FeedentryComponent
   ],
   imports: [
     BrowserModule,

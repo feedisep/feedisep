@@ -9,6 +9,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule, MatCardModule, MatProgressBarModule, MatRippleModule, MatToolbarModule, MatTooltipModule} from '@angular/material';
+import { FeedComponent } from './feed/feed.component';
+import { FeedentryComponent } from './feed/feedentry/feedentry.component';
 import { SearchZoneComponent } from './search-zone/search-zone.component';
 
 @NgModule({
@@ -18,6 +20,9 @@ import { SearchZoneComponent } from './search-zone/search-zone.component';
     TicketFullComponent,
     TicketMinComponent,
     SearchZoneComponent
+    TicketMinComponent,
+    FeedComponent,
+    FeedentryComponent
   ],
   imports: [
     BrowserModule,

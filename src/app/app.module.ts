@@ -9,13 +9,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule, MatCardModule, MatProgressBarModule, MatRippleModule, MatToolbarModule, MatTooltipModule} from '@angular/material';
+import { SearchZoneComponent } from './search-zone/search-zone.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TicketComponent,
     TicketFullComponent,
-    TicketMinComponent
+    TicketMinComponent,
+    SearchZoneComponent
   ],
   imports: [
     BrowserModule,

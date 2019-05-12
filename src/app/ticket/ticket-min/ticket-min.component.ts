@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatIconRegistry} from '@angular/material';
 import {DomSanitizer} from '@angular/platform-browser';
+import {Ticket} from '../../Ticket';
 
 @Component({
   selector: 'app-ticket-min',
@@ -9,6 +10,11 @@ import {DomSanitizer} from '@angular/platform-browser';
 })
 export class TicketMinComponent implements OnInit {
 
+  // @ts-ignore
+  ticket: Ticket = {
+    id: 1,
+    title: 'Test1'
+  };
   constructor(private matIconRegistery: MatIconRegistry, private sanitizer: DomSanitizer) {
     this.matIconRegistery.addSvgIcon('comment',
       this.sanitizer.bypassSecurityTrustResourceUrl('../../../assets/img/icons/comment-icon.svg'));

@@ -20,6 +20,7 @@ import {
 import { FeedComponent } from './feed/feed.component';
 import { FeedentryComponent } from './feed/feedentry/feedentry.component';
 import { SearchZoneComponent } from './search-zone/search-zone.component';
+import { TicketMinContainerComponent } from './ticket-min-container/ticket-min-container.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SearchZoneComponent } from './search-zone/search-zone.component';
     SearchZoneComponent,
     TicketMinComponent,
     FeedComponent,
-    FeedentryComponent
+    FeedentryComponent,
+    TicketMinContainerComponent
   ],
   imports: [
     BrowserModule,

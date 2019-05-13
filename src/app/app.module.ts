@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import {
   MatButtonModule,
-  MatCardModule,
+  MatCardModule, MatExpansionModule, MatFormFieldModule,
   MatListModule,
   MatProgressBarModule,
   MatRippleModule,
@@ -44,6 +44,10 @@ import { TicketMinContainerComponent } from './ticket-min-container/ticket-min-c
     HttpClientModule,
     MatToolbarModule,
     MatRippleModule,
+    MatTooltipModule,
+    MatListModule,
+    MatExpansionModule,
+    MatFormFieldModule,
     MatTooltipModule,
     MatListModule,
   ],

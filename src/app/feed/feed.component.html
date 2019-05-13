@@ -1,3 +1,6 @@
-<p>
-  feed works!
-</p>
+<mat-accordion>
+  <ng-container *ngFor="let entry of entries">
+    <app-feedentry [feedEntry]=entry>
+    </app-feedentry>
+  </ng-container>
+</mat-accordion>

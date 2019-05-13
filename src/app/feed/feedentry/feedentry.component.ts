@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Feedentry} from '../../Feedentry';
 
 @Component({
   selector: 'app-feedentry',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedentryComponent implements OnInit {
 
-  constructor() { }
+  @Input() feedEntry: Feedentry;
+
+  constructor(public entry: Feedentry) {
+    this.feedEntry = entry;
+  }
 
   ngOnInit() {
   }

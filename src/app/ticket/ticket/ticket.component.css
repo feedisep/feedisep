@@ -1,6 +1,7 @@
 mat-card {
   max-width: 90%;
   margin: 15px auto;
+  margin-right: 5%; /*ajout Antoine*/
 }
 
 .example-header-image {

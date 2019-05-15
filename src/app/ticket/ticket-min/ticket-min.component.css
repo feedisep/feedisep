@@ -1,12 +1,12 @@
-mat-card {
-  max-width: 90%;
-}
+/*
 app-ticket-min{
   max-width: 45%;
 }
+*/
 .solo-min-ticket {
-  max-width: 45%;
-  margin: 0 15px ;
+  max-width: 100%;
+  min-width: 75%;
+  margin: 15px ;
 }
 .state-card{
   font-weight: bold;

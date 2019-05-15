@@ -15,7 +15,8 @@ import {
   MatProgressBarModule,
   MatRippleModule,
   MatToolbarModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatButtonToggleModule,
 } from '@angular/material';
 import { FeedComponent } from './feed/feed.component';
 import { FeedentryComponent } from './feed/feedentry/feedentry.component';
@@ -50,6 +51,8 @@ import { TicketMinContainerComponent } from './ticket-min-container/ticket-min-c
     MatFormFieldModule,
     MatTooltipModule,
     MatListModule,
+    MatButtonModule,
+    MatButtonToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,10 +5,10 @@ import {Ticket} from '../Ticket';
 
 @Component({
   selector: 'app-search-zone',
-  templateUrl: './search-zone.component.html',
-  styleUrls: ['./search-zone.component.css']
+  templateUrl: './main-content.component.html',
+  styleUrls: ['./main-content.component.css']
 })
-export class SearchZoneComponent implements OnInit {
+export class MainContentComponent implements OnInit {
 
   // @ts-ignore
   /*

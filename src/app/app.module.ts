@@ -16,11 +16,11 @@ import {
   MatRippleModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatButtonToggleModule,
+  MatButtonToggleModule, MatTabsModule, MatSidenavModule,
 } from '@angular/material';
 import { FeedComponent } from './feed/feed.component';
 import { FeedentryComponent } from './feed/feedentry/feedentry.component';
-import { SearchZoneComponent } from './search-zone/search-zone.component';
+import { MainContentComponent } from './main-content/main-content.component';
 import { TicketMinContainerComponent } from './ticket-min-container/ticket-min-container.component';
 
 @NgModule({
@@ -29,7 +29,7 @@ import { TicketMinContainerComponent } from './ticket-min-container/ticket-min-c
     TicketComponent,
     TicketFullComponent,
     TicketMinComponent,
-    SearchZoneComponent,
+    MainContentComponent,
     TicketMinComponent,
     FeedComponent,
     FeedentryComponent,
@@ -53,6 +53,8 @@ import { TicketMinContainerComponent } from './ticket-min-container/ticket-min-c
     MatListModule,
     MatButtonModule,
     MatButtonToggleModule,
+    MatTabsModule,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

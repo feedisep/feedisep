@@ -16,12 +16,13 @@ import {
   MatRippleModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatButtonToggleModule, MatTabsModule, MatSidenavModule,
+  MatButtonToggleModule, MatTabsModule, MatSidenavModule, MatPaginatorModule, MatGridListModule,
 } from '@angular/material';
 import { FeedComponent } from './feed/feed.component';
 import { FeedentryComponent } from './feed/feedentry/feedentry.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { TicketMinContainerComponent } from './ticket-min-container/ticket-min-container.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TicketMinContainerComponent } from './ticket-min-container/ticket-min-c
     TicketMinComponent,
     FeedComponent,
     FeedentryComponent,
-    TicketMinContainerComponent
+    TicketMinContainerComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,8 @@ import { TicketMinContainerComponent } from './ticket-min-container/ticket-min-c
     MatButtonToggleModule,
     MatTabsModule,
     MatSidenavModule,
+    MatPaginatorModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

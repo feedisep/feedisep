@@ -4,8 +4,7 @@ app-ticket-min{
 }
 */
 .solo-min-ticket {
-  max-width: 100%;
-  min-width: 75%;
+  width: 90%;
   margin: 15px ;
 }
 .state-card{

@@ -35,7 +35,6 @@ Tags are used to prefix your commit. They should be one of the following
  - **[REL]** for release commits: new major or minor stable versions;
  - **[IMP]** for improvements: most of the changes done in development version are incremental improvements not related to another tag;
  - **[MERGE]** for merge commits: used in forward port of bug fixes but also as main commit for feature involving several separated commits;
- - **[CLA]** for signing the Odoo Individual Contributor License;
  - **[I18N]** for changes in translation files;
 
 After tag comes the modified module name. If several modules are modified, list them or use various to tell it is cross-modules.

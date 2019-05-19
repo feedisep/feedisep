@@ -1,11 +1,19 @@
 mat-form-field{
   width: 100%;
   max-width: 100%;
+  overflow-wrap: break-spaces;
 }
 
 textarea{
-  overflow-wrap: break-spaces;
+  max-width: 100%;
+  min-height: 100px;
 }
 button{
   margin: 8px;
+}
+mat-chip{
+  font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+.angular-with-newlines {
+  overflow-wrap: break-spaces;
 }

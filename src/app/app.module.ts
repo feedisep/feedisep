@@ -10,13 +10,22 @@ import {MatIconModule} from '@angular/material/icon';
 import {HttpClientModule} from '@angular/common/http';
 import {
   MatButtonModule,
-  MatCardModule, MatExpansionModule, MatFormFieldModule,
+  MatCardModule,
+  MatExpansionModule,
+  MatFormFieldModule,
   MatListModule,
   MatProgressBarModule,
   MatRippleModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatButtonToggleModule, MatTabsModule, MatSidenavModule, MatPaginatorModule, MatGridListModule, MatDialogModule
+  MatButtonToggleModule,
+  MatTabsModule,
+  MatSidenavModule,
+  MatPaginatorModule,
+  MatGridListModule,
+  MatDialogModule,
+  MatInputModule,
+  MatChipsModule
 } from '@angular/material';
 import {FeedComponent} from './feed/feed.component';
 import {FeedentryComponent} from './feed/feedentry/feedentry.component';
@@ -60,6 +69,8 @@ import {SideNavComponent} from './side-nav/side-nav.component';
     MatSidenavModule,
     MatPaginatorModule,
     MatGridListModule,
+    MatInputModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

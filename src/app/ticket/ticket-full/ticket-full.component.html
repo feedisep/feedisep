@@ -1,3 +1,12 @@
-<p>
-  ticket-full works!
-</p>
+<!-- Form for new ticket-->
+<mat-toolbar>New ticket</mat-toolbar>
+<mat-form-field appearance="outline">
+  <mat-label>Description</mat-label>
+  <input matInput placeholder="Describe the problem" required>
+  <textarea matInput></textarea>
+</mat-form-field>
+<mat-chip-list>
+  <mat-chip>Micro-wave</mat-chip>
+  <mat-chip>Coffee dispenser</mat-chip>
+</mat-chip-list>
+<button mat-button>Post</button>

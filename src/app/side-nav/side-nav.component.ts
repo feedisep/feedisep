@@ -14,7 +14,7 @@ export class SideNavComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(TicketFullComponent, {
-      width: '250px',
+      width: '50%',
     });
     dialogRef.componentInstance.dialogRef = dialogRef;
 

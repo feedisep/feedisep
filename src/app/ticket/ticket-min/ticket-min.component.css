@@ -3,34 +3,59 @@ app-ticket-min{
   max-width: 45%;
 }
 */
-.solo-min-ticket {
-  width: 90%;
-  margin: 15px ;
+
+#state{
+  position: relative;
+  right: -16px;
+  content: '';
+  display: block;
+  height: 8px;
+  min-width: 16px;
 }
-.state-card{
-  font-weight: bold;
-  margin: 15px;
-  padding: 7px;
-}
-.state-validated{
+
+.validated {
   background-color: lightcyan;
 }
-.state-new{
-  color:white;
+
+.new {
+  color: white;
   background-color: blueviolet;
 }
-.state-taken{
+
+.taken {
   background-color: darksalmon;
 }
-.state-solved{
+
+.solved {
   background-color: yellowgreen;
 }
-.state-paused{
+
+.paused {
   background-color: tomato;
 }
-.state-archived{
+
+.archived {
   background-color: gold;
 }
-.state-canceled{
+
+.canceled {
   background-color: crimson;
+}
+
+.favorite-chip {
+  color: crimson;
+ background-color: rgba(255, 20, 68, 0.25);
+}
+
+.comment-chip {
+  color: blueviolet;
+  background-color: rgba(155, 47, 255, 0.25);
+}
+
+mat-icon{
+  margin-right: 8px;
+}
+
+mat-card-footer{
+  padding: 0 0 0 2px;
 }

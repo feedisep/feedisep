@@ -1,16 +1,13 @@
-mat-card {
-  min-width: 35%;
-  max-width: 35%;
-  float: right;
-  margin-right: 5%;
-  margin-left: 5%;
+h2{
+  padding-right: 8px;
 }
 
-h2{
-  padding-right: 5%;
+app-ticket-min {
+  margin: 0 8px 0 0;
 }
 
 .ticket-min-list {
+  padding: 8px;
   max-width: 100%;
   display: flex;
   overflow: scroll;

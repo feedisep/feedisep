@@ -25,7 +25,7 @@ import {
   MatGridListModule,
   MatDialogModule,
   MatInputModule,
-  MatChipsModule
+  MatChipsModule, MatBadgeModule
 } from '@angular/material';
 import {FeedComponent} from './feed/feed.component';
 import {FeedentryComponent} from './feed/feedentry/feedentry.component';
@@ -71,6 +71,7 @@ import {SideNavComponent} from './side-nav/side-nav.component';
     MatGridListModule,
     MatInputModule,
     MatChipsModule,
+    MatBadgeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

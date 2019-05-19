@@ -7,6 +7,7 @@ export interface Ticket {
   editorId: number;
   updateDate: string;
   priority: number;
+  state: string;
   upvote: number;
 //  for Research purposes
   serial: string;

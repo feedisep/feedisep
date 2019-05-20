@@ -1,9 +1,9 @@
-<mat-card matBadge="4" matBadgeHidden="true">
+<mat-card matBadge="4" matBadgeHidden="true" (click)="openDialog()">
   <mat-card-header>
-    <mat-card-title>
+    <mat-card-title (click)="antiClick($event)">
       {{ticket.title}}
     </mat-card-title>
-    <mat-card-subtitle>
+    <mat-card-subtitle (click)="antiClick($event)">
       {{ticket.serial || 'ticket-001'}}
     </mat-card-subtitle>
     <div id="state" matTooltip="State: {{ticket.state}}" matTooltipPosition="above" [ngClass]="ticket.state"></div>

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {MatIconRegistry} from '@angular/material';
+import {MatDialog, MatIconRegistry} from '@angular/material';
 import {DomSanitizer} from '@angular/platform-browser';
 import {Ticket} from '../../Ticket';
+import {TicketFullComponent} from "../ticket-full/ticket-full.component";
 
 @Component({
   selector: 'app-ticket-min',
@@ -17,11 +18,26 @@ export class TicketMinComponent implements OnInit {
     state: 'new'
   };
   comments: number = null;
-  constructor(private matIconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
+  constructor(public dialog: MatDialog, private matIconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
     this.matIconRegistry.addSvgIcon('comment',
       this.sanitizer.bypassSecurityTrustResourceUrl('../../../assets/img/icons/comment-icon.svg'));
     this.matIconRegistry.addSvgIcon('chat',
       this.sanitizer.bypassSecurityTrustResourceUrl('../../../assets/img/icons/chat-icon.svg'));
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(TicketFullComponent, {
+      width: '50%',
+    });
+    dialogRef.componentInstance.dialogRef = dialogRef;
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  antiClick(event) {
+    event.stopPropagation();
   }
 
   ngOnInit() {   }

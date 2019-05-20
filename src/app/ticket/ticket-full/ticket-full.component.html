@@ -1,5 +1,9 @@
 <!-- Form for new ticket-->
-<mat-toolbar>New ticket</mat-toolbar>
+<mat-form-field appearance="fill">
+  <mat-label>New ticket</mat-label>
+  <input matInput placeholder="Title">
+  <mat-hint>Your problem</mat-hint>
+</mat-form-field>
 <mat-form-field appearance="outline">
   <mat-label>Description</mat-label>
   <textarea matInput placeholder="Describe the problem" cols="10" wrap="hard" class="angular-with-newlines"></textarea>

@@ -1,4 +1,4 @@
-#nav-button-container{
+#nav-button-container {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -8,17 +8,29 @@
   flex-shrink: 0;
   width: 100%;
   transition-duration: .15s;
-  transition-property: background-color,box-shadow;
-  transition-timing-function: cubic-bezier(0.4,0.0,0.2,1);
+  transition-property: background-color, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+app-ticket-min {
+  margin: 0 8px 0 0;
+}
+
+.ticket-min-list {
+  padding: 8px;
+  max-width: 100%;
+  display: flex;
+  overflow: scroll;
+  overflow-y: hidden;
 }
 
 #new {
   align-items: center;
   border-radius: 24px;
-  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302),0 1px 3px 1px rgba(60,64,67,0.149);
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
   display: inline-flex;
   flex-direction: row-reverse;
-  font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  font-family: 'Google Sans', Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
   font-size: .875rem;
   font-weight: 500;
   height: 48px;
@@ -26,7 +38,7 @@
   padding: 0 0 0 24px;
 }
 
-#new::before{
+#new::before {
   background-image: url('https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -37,7 +49,7 @@
   min-width: 56px;
 }
 
-.button-container{
+.button-container {
   align-items: center;
   display: -webkit-box;
   display: -moz-box;
@@ -53,10 +65,10 @@
 #user {
   align-items: center;
   border-radius: 24px;
-  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302),0 1px 3px 1px rgba(60,64,67,0.149);
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
   display: inline-flex;
   flex-direction: row-reverse;
-  font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  font-family: 'Google Sans', Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
   font-size: .875rem;
   font-weight: 500;
   height: 48px;
@@ -64,7 +76,7 @@
   padding: 0 0 0 24px;
 }
 
-#user::before{
+#user::before {
   background-image: url('../../assets/img/icons/person-icon.svg');
   background-position: center;
   background-repeat: no-repeat;

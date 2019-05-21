@@ -3,7 +3,6 @@
     <div mat-ripple id="new" (click)="openDialog()">Nouveau Ticket</div>
   </div>
 
-
   <div class="button-container">
     <div mat-ripple id="user"><button mat-button [matMenuTriggerFor]="menu">Menu</button></div>
     <mat-menu #menu="matMenu">
@@ -15,6 +14,13 @@
   </div>
 </div>
 
-
-<app-ticket-min-container>
-</app-ticket-min-container>
+<div class="my-tickets-container">
+  <mat-toolbar>
+    <h2>My Tickets</h2>
+  </mat-toolbar>
+  <div class="ticket-min-list">
+    <app-ticket-min></app-ticket-min>
+  </div>
+</div>
+<!--<app-ticket-min-container>-->
+<!--</app-ticket-min-container>-->

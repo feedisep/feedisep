@@ -6,7 +6,7 @@ import {TicketComponent} from './ticket/ticket/ticket.component';
 import {TicketFullComponent} from './ticket/ticket-full/ticket-full.component';
 import {TicketMinComponent} from './ticket/ticket-min/ticket-min.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
+import {MatIconModule, MatIcon} from '@angular/material/icon';
 import {HttpClientModule} from '@angular/common/http';
 import {
   MatButtonModule,
@@ -25,7 +25,7 @@ import {
   MatGridListModule,
   MatDialogModule,
   MatInputModule,
-  MatChipsModule, MatBadgeModule
+  MatChipsModule, MatBadgeModule, MatCheckboxModule
 } from '@angular/material';
 import {FeedComponent} from './feed/feed.component';
 import {FeedentryComponent} from './feed/feedentry/feedentry.component';
@@ -33,6 +33,7 @@ import {MainContentComponent} from './main-content/main-content.component';
 import {TicketMinContainerComponent} from './ticket-min-container/ticket-min-container.component';
 import {SideNavComponent} from './side-nav/side-nav.component';
 import {MatMenuModule} from '@angular/material/';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -74,6 +75,8 @@ import {MatMenuModule} from '@angular/material/';
     MatChipsModule,
     MatBadgeModule,
     MatMenuModule,
+    MatCheckboxModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

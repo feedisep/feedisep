@@ -2,9 +2,19 @@
   <div class="button-container">
     <div mat-ripple id="new" (click)="openDialog()">Nouveau Ticket</div>
   </div>
+
+
   <div class="button-container">
-    <div mat-ripple id="user">Name</div>
+    <div mat-ripple id="user"><button mat-button [matMenuTriggerFor]="menu">Menu</button></div>
+    <mat-menu #menu="matMenu">
+    <button mat-menu-item>first name</button>
+    <button mat-menu-item>Last name</button>
+    <button mat-menu-item (click)="goToMyAccount()">change account info</button>
+    <button mat-menu-item (click)="disconnect()">déconnextion</button>
+  </mat-menu>
   </div>
 </div>
+
+
 <app-ticket-min-container>
 </app-ticket-min-container>

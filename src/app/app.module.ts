@@ -32,6 +32,7 @@ import {FeedentryComponent} from './feed/feedentry/feedentry.component';
 import {MainContentComponent} from './main-content/main-content.component';
 import {TicketMinContainerComponent} from './ticket-min-container/ticket-min-container.component';
 import {SideNavComponent} from './side-nav/side-nav.component';
+import {MatMenuModule} from '@angular/material/';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import {SideNavComponent} from './side-nav/side-nav.component';
     MatInputModule,
     MatChipsModule,
     MatBadgeModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

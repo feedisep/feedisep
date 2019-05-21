@@ -23,4 +23,12 @@ export class SideNavComponent {
     });
   }
 
+  goToMyAccount(): void {
+    window.location.href = 'https://moncompte.isep.fr/' ;
+  }
+  disconnect(): void {
+    //do something
+    window.location.href = 'https://sso-portal.isep.fr/' ;
+  }
+
 }

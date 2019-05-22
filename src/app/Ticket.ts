@@ -11,4 +11,6 @@ export interface Ticket {
   upvote: number;
 //  for Research purposes
   serial: string;
+  // to make the distinction between ticket full and ticket form
+  displayTicket: boolean;
 }

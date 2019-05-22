@@ -16,3 +16,7 @@ mat-card {
 .padding-icon{
   padding: 14px;
 }
+
+.angular-with-newlines {
+  overflow-wrap: break-spaces;
+}

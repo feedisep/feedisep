@@ -2,10 +2,10 @@
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title (click)="antiClick($event)">
-      Some Random Problem
+      {{ticket.title}}
     </mat-card-title>
     <mat-card-subtitle (click)="antiClick($event)">
-      ticket-serial
+      {{ticket.serial}}
     </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
@@ -14,19 +14,19 @@
   <mat-card-footer>
     <mat-toolbar>
       <mat-toolbar-row>
-        <span (click)="antiClick($event)">description</span>
+        <span class="angular-with-newlines" (click)="antiClick($event)">{{ticket.content}}</span>
         <span class="spacer"></span>
         <button mat-icon-button>
-          <mat-icon svgIcon="favorite"></mat-icon>
+          <mat-icon svgIcon="favorite" (click)="antiClick($event)"></mat-icon>
         </button>
         <button mat-icon-button>
-          <mat-icon svgIcon="comment"></mat-icon>
+          <mat-icon svgIcon="comment" (click)="antiClick($event)"></mat-icon>
         </button>
         <button mat-icon-button>
-          <mat-icon svgIcon="bookmark"></mat-icon>
+          <mat-icon svgIcon="bookmark" (click)="antiClick($event)"></mat-icon>
         </button>
         <button mat-icon-button>
-          <mat-icon svgIcon="share"></mat-icon>
+          <mat-icon svgIcon="share" (click)="antiClick($event)"></mat-icon>
         </button>
       </mat-toolbar-row>
     </mat-toolbar>

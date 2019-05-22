@@ -8,7 +8,7 @@ import {Ticket} from '../../Ticket';
   styleUrls: ['./ticket-full.component.css']
 })
 export class TicketFullComponent implements OnInit {
-
+  displayTicket = 'true';
   constructor(
     public dialogRef: MatDialogRef<TicketFullComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Ticket) {}

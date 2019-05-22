@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatIconRegistry} from '@angular/material';
 import {DomSanitizer} from '@angular/platform-browser';
 import {Ticket} from '../../Ticket';
-import {TicketFullComponent} from "../ticket-full/ticket-full.component";
+import {TicketFullComponent} from '../ticket-full/ticket-full.component';
 
 @Component({
   selector: 'app-ticket-min',

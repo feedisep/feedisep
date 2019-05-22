@@ -13,4 +13,7 @@ export class TicketService {
   isItFull(isFull: boolean) {
     this.messageSource.next(isFull);
   }
+  isID(ticketID: number) {
+    this.messageSource.next(ticketID);
+  }
 }

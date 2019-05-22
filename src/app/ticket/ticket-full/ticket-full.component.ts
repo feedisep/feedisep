@@ -11,6 +11,7 @@ import {TicketService} from '../ticket.service';
 })
 export class TicketFullComponent implements OnInit {
   displayTicket = false;
+  id = 0;
   constructor(
     public dialogRef: MatDialogRef<TicketFullComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Ticket,
@@ -18,6 +19,7 @@ export class TicketFullComponent implements OnInit {
 
   ngOnInit() {
     this.ticketservice.currentMessage.subscribe(isFull => this.displayTicket = isFull);
+    this.ticketservice.currentMessage.subscribe(ticketID => this.id = ticketID);
   }
 
 }

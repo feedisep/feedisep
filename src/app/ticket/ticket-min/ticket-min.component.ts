@@ -3,6 +3,7 @@ import {MatDialog, MatIconRegistry} from '@angular/material';
 import {DomSanitizer} from '@angular/platform-browser';
 import {Ticket} from '../../Ticket';
 import {TicketFullComponent} from '../ticket-full/ticket-full.component';
+import {TicketService} from '../ticket.service';
 
 @Component({
   selector: 'app-ticket-min',
@@ -10,7 +11,6 @@ import {TicketFullComponent} from '../ticket-full/ticket-full.component';
   styleUrls: ['./ticket-min.component.css']
 })
 export class TicketMinComponent implements OnInit {
-
   // @ts-ignore
   ticket: Ticket = {
     id: 1,
@@ -18,7 +18,10 @@ export class TicketMinComponent implements OnInit {
     state: 'new'
   };
   comments: number = null;
-  constructor(public dialog: MatDialog, private matIconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
+  constructor(public dialog: MatDialog,
+              private matIconRegistry: MatIconRegistry,
+              private sanitizer: DomSanitizer,
+              private ticketservice: TicketService) {
     this.matIconRegistry.addSvgIcon('comment',
       this.sanitizer.bypassSecurityTrustResourceUrl('../../../assets/img/icons/comment-icon.svg'));
     this.matIconRegistry.addSvgIcon('chat',
@@ -29,6 +32,7 @@ export class TicketMinComponent implements OnInit {
     const dialogRef = this.dialog.open(TicketFullComponent, {
       width: '50%',
     });
+    this.ticketservice.isItFull(true);
     dialogRef.componentInstance.dialogRef = dialogRef;
 
     dialogRef.afterClosed().subscribe(result => {
@@ -40,6 +44,6 @@ export class TicketMinComponent implements OnInit {
     event.stopPropagation();
   }
 
-  ngOnInit() {   }
+  ngOnInit() {}
 
 }

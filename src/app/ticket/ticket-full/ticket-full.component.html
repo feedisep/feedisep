@@ -19,8 +19,51 @@
 
 <ng-template #ticketBlock>
   <!-- Full ticket-->
-  <div>
-    hello new full ticket
-  </div>
+  <mat-card class="header-full">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>
+        Récupérer le titre avec l'id
+      </mat-card-title>
+      <mat-card-subtitle>
+        Récupérer le serial avec l'id
+      </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+  <mat-card class="description">
+    Récupérer description à partir de l'id
+  </mat-card>
+  <mat-list class="comments-full">
+    <mat-list-item> Comment1 </mat-list-item>
+    <mat-list-item> Comment2 </mat-list-item>
+    <mat-list-item> Comment3 </mat-list-item>
+  </mat-list>
+  <mat-form-field appearance="standard">  <!--material n'est pas affiché correctement-->
+    <mat-label>Your comment</mat-label>
+    <input matInput placeholder="Comment...">
+  </mat-form-field>
+  <mat-card-footer class="footer-full">
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <span class="angular-with-newlines" (click)="antiClick($event)">{{ticket.content}}</span>
+        <span class="spacer"></span>
+        <button mat-icon-button>
+          <mat-icon svgIcon="favorite" (click)="antiClick($event)"></mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon svgIcon="comment" (click)="antiClick($event)"></mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon svgIcon="bookmark" (click)="antiClick($event)"></mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon svgIcon="share" (click)="antiClick($event)"></mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-progress-bar mode="indeterminate" value="50" color="primary" matTooltip="status info"
+                      matTooltipPosition="above"></mat-progress-bar>
+  </mat-card-footer>
+
 </ng-template>
 

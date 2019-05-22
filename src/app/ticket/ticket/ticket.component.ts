@@ -27,7 +27,10 @@ export class TicketComponent implements OnInit {
     displayTicket: true,
   };
 
-  constructor(public dialog: MatDialog, private matIconRegistery: MatIconRegistry, private sanitizer: DomSanitizer, private ticketservice: TicketService) {
+  constructor(public dialog: MatDialog,
+              private matIconRegistery: MatIconRegistry,
+              private sanitizer: DomSanitizer,
+              private ticketservice: TicketService) {
     this.matIconRegistery.addSvgIcon('favorite',
       this.sanitizer.bypassSecurityTrustResourceUrl('../../../assets/img/icons/favorite-icon.svg'));
     this.matIconRegistery.addSvgIcon('bookmark',

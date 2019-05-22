@@ -17,3 +17,18 @@ mat-chip{
 .angular-with-newlines {
   overflow-wrap: break-spaces;
 }
+.header-full{
+  background-color: papayawhip;
+}
+.description{
+  font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  padding: 20px;
+  background-color: white;
+}
+.footer-full{
+  width: 100%;
+  margin-left: 0%;
+}
+.comments-full{
+  margin-left: 5%;
+}

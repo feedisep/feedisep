@@ -1,4 +1,4 @@
-<div *ngIf="displayTicket=='true'; then ticketBlock; else formBlock;"></div>
+<div *ngIf="displayTicket===true; then ticketBlock; else formBlock;"></div>
 <!-- Form for new ticket-->
 <ng-template #formBlock>
   <mat-form-field appearance="fill">
@@ -21,8 +21,6 @@
   <!-- Full ticket-->
   <div>
     hello new full ticket
-    {{ticket.displayTicket}}
   </div>
-
 </ng-template>
 

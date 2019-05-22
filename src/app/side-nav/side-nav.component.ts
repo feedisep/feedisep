@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {TicketFullComponent} from '../ticket/ticket-full/ticket-full.component';
+import {TicketService} from '../ticket/ticket.service';
 
 @Component({
   selector: 'app-side-nav',
@@ -9,13 +10,14 @@ import {TicketFullComponent} from '../ticket/ticket-full/ticket-full.component';
 })
 export class SideNavComponent {
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, private ticketservice: TicketService) {
   }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(TicketFullComponent, {
       width: '50%',
     });
+    this.ticketservice.isItFull(false);
     dialogRef.componentInstance.dialogRef = dialogRef;
 
     dialogRef.afterClosed().subscribe(result => {
@@ -27,7 +29,7 @@ export class SideNavComponent {
     window.location.href = 'https://moncompte.isep.fr/' ;
   }
   disconnect(): void {
-    //do something
+    // do something
     window.location.href = 'https://sso-portal.isep.fr/' ;
   }
 

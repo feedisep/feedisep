@@ -1,6 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import {Ticket} from '../../Ticket';
+import {TicketService} from '../ticket.service';
+
 
 @Component({
   selector: 'app-ticket-full',
@@ -8,12 +10,14 @@ import {Ticket} from '../../Ticket';
   styleUrls: ['./ticket-full.component.css']
 })
 export class TicketFullComponent implements OnInit {
-  displayTicket = 'true';
+  displayTicket = false;
   constructor(
     public dialogRef: MatDialogRef<TicketFullComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Ticket) {}
+    @Inject(MAT_DIALOG_DATA) public data: Ticket,
+    private ticketservice: TicketService) {}
 
   ngOnInit() {
+    this.ticketservice.currentMessage.subscribe(isFull => this.displayTicket = isFull);
   }
 
 }

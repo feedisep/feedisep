@@ -5,6 +5,7 @@ import {TicketFullComponent} from '../ticket-full/ticket-full.component';
 import {until} from 'selenium-webdriver';
 import elementIsDisabled = until.elementIsDisabled;
 import {Ticket} from '../../Ticket';
+import {TicketService} from '../ticket.service';
 
 @Component({
   selector: 'app-ticket',
@@ -19,13 +20,14 @@ export class TicketComponent implements OnInit {
     id: 2,
     title: 'Test2',
     state: 'Taken',
-    content: 'Description of the problem ' + 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    content: 'Description of the problem Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     // content est bloqué à 140 caractères
     upvote: 3,
-    serial: 'NDCTEST2'
+    serial: 'NDCTEST2',
+    displayTicket: true,
   };
 
-  constructor(public dialog: MatDialog, private matIconRegistery: MatIconRegistry, private sanitizer: DomSanitizer) {
+  constructor(public dialog: MatDialog, private matIconRegistery: MatIconRegistry, private sanitizer: DomSanitizer, private ticketservice: TicketService) {
     this.matIconRegistery.addSvgIcon('favorite',
       this.sanitizer.bypassSecurityTrustResourceUrl('../../../assets/img/icons/favorite-icon.svg'));
     this.matIconRegistery.addSvgIcon('bookmark',
@@ -40,6 +42,7 @@ export class TicketComponent implements OnInit {
     const dialogRef = this.dialog.open(TicketFullComponent, {
       width: '50%',
     });
+    this.ticketservice.isItFull(true);
     dialogRef.componentInstance.dialogRef = dialogRef;
 
     dialogRef.afterClosed().subscribe(result => {

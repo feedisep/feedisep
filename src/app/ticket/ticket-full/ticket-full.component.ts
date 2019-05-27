@@ -22,4 +22,7 @@ export class TicketFullComponent implements OnInit {
     this.ticketservice.currentMessage.subscribe(ticketID => this.id = ticketID);
   }
 
+  antiClick(event) {
+    event.stopPropagation();
+  }
 }

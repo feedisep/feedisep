@@ -26,7 +26,6 @@ export class TicketComponent implements OnInit {
     serial: 'NDCTEST2',
     displayTicket: true,
   };
-
   constructor(public dialog: MatDialog,
               private matIconRegistery: MatIconRegistry,
               private sanitizer: DomSanitizer,

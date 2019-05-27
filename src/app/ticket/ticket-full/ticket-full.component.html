@@ -1,19 +1,31 @@
 <div *ngIf="displayTicket===true; then ticketBlock; else formBlock;"></div>
 <!-- Form for new ticket-->
 <ng-template #formBlock>
+
   <mat-form-field appearance="fill">
     <mat-label>New ticket </mat-label>
     <input matInput placeholder="Title">
-    <mat-hint>Your problem</mat-hint>
+    <mat-hint>The problem</mat-hint>
   </mat-form-field>
+
   <mat-form-field appearance="outline">
-    <mat-label>Description</mat-label>
+    <mat-label>Description...</mat-label>
     <textarea matInput placeholder="Describe the problem" cols="10" wrap="hard" class="angular-with-newlines"></textarea>
   </mat-form-field>
+
+  <mat-hint>Choose at least one tag for your problem : </mat-hint>
   <mat-chip-list selectable="true">
     <mat-chip>Micro-wave</mat-chip>
     <mat-chip>Coffee dispenser</mat-chip>
+    <mat-chip>Computer</mat-chip>
+    <mat-chip>Wi-Fi</mat-chip>
+    <mat-chip>The door</mat-chip>
+    <mat-chip>fghjk</mat-chip>
   </mat-chip-list>
+
+
+
+
   <button mat-button>Post</button>
 </ng-template>
 

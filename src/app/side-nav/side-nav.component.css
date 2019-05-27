@@ -86,3 +86,11 @@ app-ticket-min {
   height: 48px;
   min-width: 56px;
 }
+.my-feed mat-divider{
+  width: 200px;
+}
+.my-feed .state-solved{ /*for presentation, will discuss later if useful or not*/
+  background-color: yellowgreen;
+  padding: 5px;
+  margin-left: 5px;
+}

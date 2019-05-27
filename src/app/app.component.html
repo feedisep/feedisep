@@ -1,17 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-toolbar color="primary">
-  <h1>Welcome to {{ title }}!</h1>
-  <span class="toolbar-spacer"></span>
-
-  <button mat-icon-button color="warn">
-    <mat-icon svgIcon="favorite" (click)="toggleNav(start)"></mat-icon>
-  </button>
+  <h1>Write your feedback to {{ title }}!</h1>
+  <img src="../assets/img/Feedback.jpg" width="800">
 </mat-toolbar>
 <mat-sidenav-container hasBackdrop="false">
   <mat-sidenav-content>
     <app-search-zone></app-search-zone>
   </mat-sidenav-content>
-  <mat-sidenav #start mode="side" [(opened)]="opened" position="end">
+  <mat-sidenav mode="side" opened="true" position="end">
     <app-side-nav></app-side-nav>
   </mat-sidenav>
 </mat-sidenav-container>

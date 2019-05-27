@@ -1,15 +1,15 @@
 <div id="nav-button-container">
   <div class="button-container">
-    <div mat-ripple id="new" (click)="openDialog()">Nouveau Ticket</div>
+    <div mat-ripple id="new" (click)="openDialog()">New Ticket</div>
   </div>
 
   <div class="button-container">
-    <div mat-ripple id="user"><button mat-button [matMenuTriggerFor]="menu">Menu</button></div>
+    <div mat-ripple id="user"><button mat-button [matMenuTriggerFor]="menu">User</button></div>
     <mat-menu #menu="matMenu">
-    <button mat-menu-item disabled>first name</button>
+    <button mat-menu-item disabled>First name</button>
     <button mat-menu-item disabled>Last name</button>
-    <button mat-menu-item (click)="goToMyAccount()">change account info</button>
-    <button mat-menu-item (click)="disconnect()">déconnexion</button>
+    <button mat-menu-item (click)="goToMyAccount()">Change account information</button>
+    <button mat-menu-item (click)="disconnect()">Log out</button>
   </mat-menu>
   </div>
 </div>

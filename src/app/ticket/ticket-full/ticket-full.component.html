@@ -14,6 +14,7 @@
   </mat-form-field>
 
   <mat-hint>Choose at least one tag for your problem : </mat-hint>
+  <!--
   <mat-chip-list selectable="true">
     <mat-chip>Micro-wave</mat-chip>
     <mat-chip>Coffee dispenser</mat-chip>
@@ -23,6 +24,15 @@
     <mat-chip>Sound</mat-chip>
     <mat-chip>Microphone</mat-chip>
   </mat-chip-list>
+  -->
+  <form>
+    <mat-form-field class="search-tag-field" appearance="outline" >
+      <mat-label>Tags</mat-label>
+      <mat-select [formControl]="tags" multiple>
+        <mat-option *ngFor="let tags of tagList" [value]="tags">{{tags}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
 
 
 

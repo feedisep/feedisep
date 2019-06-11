@@ -16,9 +16,9 @@ export interface User {
   styleUrls: ['./main-content.component.css']
 })
 
-
 export class MainContentComponent implements OnInit {
-
+  tags = new FormControl();
+  tagList: string[] = ['NDC', 'NDL', 'microwave', 'light', 'computer', 'Door'];
   // @ts-ignore
   /*
   TO DO CRéER LA LISTE
@@ -31,11 +31,12 @@ export class MainContentComponent implements OnInit {
     this.matIconRegistery.addSvgIcon('search',
       this.sanitizer.bypassSecurityTrustResourceUrl('../../../assets/img/icons/search-icon.svg'));
   }
-
   ngOnInit() {
   }
 
 }
+
+
 
 export class AutocompleteDisplayExample implements OnInit {
   myControl = new FormControl();
@@ -44,6 +45,10 @@ export class AutocompleteDisplayExample implements OnInit {
     {name: 'Shelley'},
     {name: 'Igor'}
   ];
+
+
+
+
   filteredOptions: Observable<User[]>;
 
   ngOnInit() {

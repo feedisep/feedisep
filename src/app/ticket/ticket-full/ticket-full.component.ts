@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import {Ticket} from '../../Ticket';
 import {TicketService} from '../ticket.service';
+import {FormControl} from '@angular/forms';
 
 
 @Component({
@@ -12,6 +13,9 @@ import {TicketService} from '../ticket.service';
 export class TicketFullComponent implements OnInit {
   displayTicket = false;
   id = 0;
+
+  tags = new FormControl();
+  tagList: string[] = ['NDC', 'NDL', 'microwave', 'light', 'computer', 'Door'];
   constructor(
     public dialogRef: MatDialogRef<TicketFullComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Ticket,

@@ -12,7 +12,8 @@
     <app-ticket></app-ticket>
   </mat-tab>
   <mat-tab label="Search">
-    Search
+    Ticket search
+
     <form>
       <mat-form-field class="search-ticket-field" appearance="outline">
         <mat-label>Research</mat-label>
@@ -20,7 +21,20 @@
       </mat-form-field>
     </form>
 
+    <mat-divider></mat-divider>
+
+    Tag Search
+    <form>
+      <mat-form-field class="search-tag-field" appearance="outline" >
+        <mat-label>Tags to look for</mat-label>
+        <mat-select [formControl]="tags" multiple>
+          <mat-option *ngFor="let tags of tagList" [value]="tags">{{tags}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+
   </mat-tab>
+
 </mat-tab-group>
 <mat-paginator [length]="100"
                [pageSize]="10"

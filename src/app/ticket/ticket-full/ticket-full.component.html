@@ -53,7 +53,7 @@
       <input matInput placeholder="Title" value="{{ticket3.title}}">
       <mat-hint>Is the title wrong ?</mat-hint>
     </mat-form-field>
-    <mat-form-field appearance="outline">
+    <mat-form-field class="descriptionFull" appearance="outline">
       <mat-label >Description...</mat-label>
       <textarea matInput placeholder="Describe the problem" cols="10" wrap="hard" class="angular-with-newlines">{{ticket3.content}}</textarea>
     </mat-form-field>
@@ -86,6 +86,12 @@
   <div *ngIf="updatable===true; then ticketToUpdateBlock2; else ticketDisplayBlock2;"></div>
   <ng-template #ticketToUpdateBlock2>
     <button mat-button hidden (click)="closeWindow()">Update</button>
+  </ng-template>
+  <ng-template #ticketDisplayBlock2>
+    <mat-form-field appearance="outline">
+      <mat-label >Description...</mat-label>
+      <textarea matInput placeholder="Describe the problem" cols="10" wrap="hard" class="angular-with-newlines">{{ticket3.content}}</textarea>
+    </mat-form-field>
   </ng-template>
   <mat-card-footer class="footer-full">
     <mat-toolbar>

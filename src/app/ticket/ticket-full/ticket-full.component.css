@@ -53,3 +53,6 @@ mat-form-field button{
 .titreUnable:disabled{
   color: black;
 }
+.descriptionFull{
+  margin-top: 5px;
+}

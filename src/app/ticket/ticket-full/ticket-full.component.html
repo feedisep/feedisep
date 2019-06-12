@@ -23,9 +23,15 @@
     <mat-chip>Door</mat-chip>
     <mat-chip>Sound</mat-chip>
     <mat-chip>Microphone</mat-chip>
+    <mat-chip>Light</mat-chip>
   </mat-chip-list>
   -->
   <form>
+    <mat-card class="campus" (click)="onToggleChange()">
+      <p>{{campus}}</p>
+      <mat-hint>Click to switch campus</mat-hint>
+    </mat-card>
+
     <mat-form-field class="search-tag-field" appearance="outline" >
       <mat-label>Tags</mat-label>
       <mat-select [formControl]="tags" multiple>
@@ -33,8 +39,6 @@
       </mat-select>
     </mat-form-field>
   </form>
-
-
 
 
   <button mat-button>Post</button>

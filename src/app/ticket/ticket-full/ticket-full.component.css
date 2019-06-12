@@ -32,3 +32,15 @@ mat-chip{
 .comments-full{
   margin-left: 5%;
 }
+mat-hint{
+  font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+.campus p{
+  font-weight: bold;
+  color: cornflowerblue;
+  margin: 5px;
+}
+.campus{
+  margin: 5px;
+  max-width: 25%;
+}

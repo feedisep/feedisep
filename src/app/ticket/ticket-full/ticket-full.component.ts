@@ -5,6 +5,7 @@ import {TicketService} from '../ticket.service';
 import {FormControl} from '@angular/forms';
 
 
+
 @Component({
   selector: 'app-ticket-full',
   templateUrl: './ticket-full.component.html',
@@ -15,7 +16,9 @@ export class TicketFullComponent implements OnInit {
   id = 0;
 
   tags = new FormControl();
-  tagList: string[] = ['NDC', 'NDL', 'microwave', 'light', 'computer', 'Door'];
+  tagList: string[] = ['Microwave', 'Coffee dispenser', 'Microphone', 'Speakers', 'Light', 'Computer', 'Door'];
+ campus = 'NDC';
+
   constructor(
     public dialogRef: MatDialogRef<TicketFullComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Ticket,
@@ -28,5 +31,13 @@ export class TicketFullComponent implements OnInit {
 
   antiClick(event) {
     event.stopPropagation();
+  }
+
+  onToggleChange(e: Event) {
+    if (this.campus === 'NDC') {
+      this.campus = 'NDL';
+    } else {
+      this.campus = 'NDC';
+    }
   }
 }

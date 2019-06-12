@@ -25,7 +25,11 @@ import {
   MatGridListModule,
   MatDialogModule,
   MatInputModule,
-  MatChipsModule, MatBadgeModule, MatCheckboxModule, MatSelectModule
+  MatChipsModule,
+  MatBadgeModule,
+  MatCheckboxModule,
+  MatSelectModule,
+  MatSlideToggleModule,
 } from '@angular/material';
 import {FeedComponent} from './feed/feed.component';
 import {FeedentryComponent} from './feed/feedentry/feedentry.component';
@@ -79,6 +83,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

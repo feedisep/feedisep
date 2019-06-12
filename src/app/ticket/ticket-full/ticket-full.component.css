@@ -44,3 +44,6 @@ mat-hint{
   margin: 5px;
   max-width: 25%;
 }
+mat-card-header button{
+  margin-left: 70%;
+}

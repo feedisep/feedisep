@@ -12,9 +12,22 @@ import {FormControl} from '@angular/forms';
   styleUrls: ['./ticket-full.component.css']
 })
 export class TicketFullComponent implements OnInit {
+
+  // @ts-ignore
+  ticket3: Ticket = {
+    id: 3,
+    title: 'Test2',
+    state: 'Taken',
+    content: 'Description of the problem Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    // content est bloqué à 140 caractères
+    upvote: 3,
+    serial: 'NDCTEST3',
+    displayTicket: true,
+    campus: 'NDC',
+  };
   displayTicket = false;
   id = 0;
-
+  updatable = false;
   tags = new FormControl();
   tagList: string[] = ['Microwave', 'Coffee dispenser', 'Microphone', 'Speakers', 'Light', 'Computer', 'Door'];
  campus = 'NDC';
@@ -39,5 +52,11 @@ export class TicketFullComponent implements OnInit {
     } else {
       this.campus = 'NDC';
     }
+  }
+  updateTicket() {
+    this.updatable = true;
+  }
+  closeWindow() {
+    this.dialogRef.close();
   }
 }

@@ -44,6 +44,12 @@ mat-hint{
   margin: 5px;
   max-width: 25%;
 }
-mat-card-header button{
-  margin-left: 70%;
+mat-form-field button{
+  margin-left: 90%;
+}
+.ticketTag{
+  margin: 5px;
+}
+.titreUnable:disabled{
+  color: black;
 }

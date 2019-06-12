@@ -15,16 +15,16 @@
 
   <mat-hint>Choose at least one tag for your problem : </mat-hint>
   <!--
-  <mat-chip-list selectable="true">
-    <mat-chip>Micro-wave</mat-chip>
-    <mat-chip>Coffee dispenser</mat-chip>
-    <mat-chip>Computer</mat-chip>
-    <mat-chip>Wi-Fi</mat-chip>
-    <mat-chip>Door</mat-chip>
-    <mat-chip>Sound</mat-chip>
-    <mat-chip>Microphone</mat-chip>
-    <mat-chip>Light</mat-chip>
-  </mat-chip-list>
+    <mat-chip-list selectable="true">
+      <mat-chip>Micro-wave</mat-chip>
+      <mat-chip>Coffee dispenser</mat-chip>
+      <mat-chip>Computer</mat-chip>
+      <mat-chip>Wi-Fi</mat-chip>
+      <mat-chip>Door</mat-chip>
+      <mat-chip>Sound</mat-chip>
+      <mat-chip>Microphone</mat-chip>
+      <mat-chip>Light</mat-chip>
+    </mat-chip-list>
   -->
   <form>
     <mat-card class="campus" (click)="onToggleChange()">
@@ -41,29 +41,40 @@
   </form>
 
 
-  <button mat-button>Post</button>
+  <button mat-button (click)="closeWindow()">Post</button>
 </ng-template>
 
 <ng-template #ticketBlock>
   <!-- Full ticket-->
-  <mat-card class="header-full">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>
-        <!--Récupérer le titre avec l'id-->
-        Test2
-      </mat-card-title>
-      <mat-card-subtitle>
-        <!--Récupérer le serial avec l'id-->
-        NDCTEST2
-      </mat-card-subtitle>
-      <button mat-button>Modifier</button>
-    </mat-card-header>
+  <div *ngIf="updatable===true; then ticketToUpdateBlock; else ticketDisplayBlock;"></div>
+  <ng-template #ticketToUpdateBlock>
+    <mat-form-field appearance="fill">
+      <mat-label>New ticket name</mat-label>
+      <input matInput placeholder="Title" value="{{ticket3.title}}">
+      <mat-hint>Is the title wrong ?</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label >Description...</mat-label>
+      <textarea matInput placeholder="Describe the problem" cols="10" wrap="hard" class="angular-with-newlines">{{ticket3.content}}</textarea>
+    </mat-form-field>
+  </ng-template>
+  <ng-template #ticketDisplayBlock>
+    <mat-form-field appearance="fill" disabled="true">
+      <mat-label disabled="true">Ticket name</mat-label>
+      <input class="titreUnable" matInput placeholder="Title" value="{{ticket3.title}}" disabled="true">
+      <button mat-button (click)="updateTicket()">Modifier</button>
+    </mat-form-field>
+    <mat-form-field appearance="outline" disabled="true">
+      {{ticket3.content}}
+      <textarea matInput placeholder="" cols="10" wrap="hard" class="angular-with-newlines" disabled="true"></textarea>
+    </mat-form-field>
+  </ng-template>
+  <mat-card class="campus">
+    <p>{{ticket3.campus}}</p>
   </mat-card>
-  <mat-card class="description">
-    <!--Récupérer description à partir de l'id-->
-    Description of the problem Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  </mat-card>
+  <mat-chip-list selectable="true">
+    <mat-chip>Micro-wave</mat-chip>
+  </mat-chip-list>
   <mat-list class="comments-full">
     <mat-list-item> Comment1 </mat-list-item>
     <mat-divider></mat-divider>
@@ -71,10 +82,11 @@
     <mat-divider></mat-divider>
     <mat-list-item> Comment3 </mat-list-item>
   </mat-list>
-  <mat-form-field appearance="standard">  <!--material n'est pas affiché correctement-->
-    <mat-label>Your comment</mat-label>
-    <input matInput placeholder="Comment...">
-  </mat-form-field>
+
+  <div *ngIf="updatable===true; then ticketToUpdateBlock2; else ticketDisplayBlock2;"></div>
+  <ng-template #ticketToUpdateBlock2>
+    <button mat-button hidden (click)="closeWindow()">Update</button>
+  </ng-template>
   <mat-card-footer class="footer-full">
     <mat-toolbar>
       <mat-toolbar-row>
@@ -97,6 +109,5 @@
     <mat-progress-bar mode="indeterminate" value="50" color="primary" matTooltip="status info"
                       matTooltipPosition="above"></mat-progress-bar>
   </mat-card-footer>
-
 </ng-template>
 

@@ -9,6 +9,7 @@ export interface Ticket {
   priority: number;
   state: string;
   upvote: number;
+  campus: string;
 //  for Research purposes
   serial: string;
   // to make the distinction between ticket full and ticket form
